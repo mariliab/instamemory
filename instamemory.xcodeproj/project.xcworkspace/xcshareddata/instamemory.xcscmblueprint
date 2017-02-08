@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "80A04548B8DA2F4483A1F33A23BD0FE033112585",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "80A04548B8DA2F4483A1F33A23BD0FE033112585" : 9223372036854775807,
+    "288B0C426727AC43954D7929445C6756FEF7E653" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "37F85F43-51AD-4B16-95A0-7C79D33031C1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "80A04548B8DA2F4483A1F33A23BD0FE033112585" : "instamemory\/",
+    "288B0C426727AC43954D7929445C6756FEF7E653" : "instamemory\/instamemory\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "instamemory",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "instamemory.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mariliab\/instamemory.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "288B0C426727AC43954D7929445C6756FEF7E653"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mariliab\/instamemory",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "80A04548B8DA2F4483A1F33A23BD0FE033112585"
+    }
+  ]
+}
