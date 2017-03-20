@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
@@ -14,6 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var url1:String = "https://instagram.com/"
     var url2:String = "/media/"
+    
     
     
 
@@ -56,25 +58,30 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 if error != nil {
                     print (error)
                 } else {
-                    if let data = data, let JsonString = String(data: data, encoding: String.Encoding.utf8) {
-                        print(JsonString)
-                        
-                        let json = JSON(data: JsonString)
-                        
-                        for item in json["items"].arrayValue {
-                            print(item["firstName"].stringValue)
+                        let json = JSON(data: data!)
+                        //print(json["items"]);
+                        if let items = json["items"].array{
+                            for item in items {
+                                if let imagePath = item["images"]["standard_resolution"]["url"].string{
+                                    print(imagePath)
+                                    
+                                }
+                                
+                            }
+                        }
+                        else{
+                            print("NOOO")
                         }
                         
-                    }
                     
                 }
-            }
-            task.resume()
+            
+            
         }
        
-
+task.resume()
     }
 
 
 }
-
+}
