@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -62,6 +62,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czd-h9-NcO">
                                 <rect key="frame" x="76" y="292" width="33" height="30"/>
                                 <state key="normal" title="Easy"/>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="selectDifficulty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tj3-44-kMe"/>
                                 </connections>
@@ -70,7 +73,7 @@
                                 <rect key="frame" x="237" y="292" width="34" height="30"/>
                                 <state key="normal" title="Hard"/>
                                 <connections>
-                                    <action selector="selectDifficulty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xKa-km-sPD"/>
+                                    <action selector="selectDifficulty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xNU-1a-rPj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Z2-Ek-HIf">
@@ -106,6 +109,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="easyButton" destination="czd-h9-NcO" id="TLU-II-lAC"/>
+                        <outlet property="hardButton" destination="rRP-jQ-FX6" id="RcH-Pi-DEd"/>
+                        <outlet property="mediumButton" destination="2Z2-Ek-HIf" id="Gte-UX-qFN"/>
                         <outlet property="usernameTextField" destination="NYy-JK-qhl" id="Ky3-cQ-HDA"/>
                     </connections>
                 </viewController>

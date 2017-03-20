@@ -13,25 +13,52 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var usernameTextField: UITextField!
     
-    var url1:String = "https://instagram.com/"
-    var url2:String = "/media/"
+    @IBOutlet weak var easyButton: UIButton!
+    @IBOutlet weak var mediumButton: UIButton!
+    @IBOutlet weak var hardButton: UIButton!
+
     
     
+    var url1:String = "https://api.instagram.com/v1/users/"
+    var url2:String = "/media/recent/"
+    
+    
+    
+
+   
     
 
     var difficulty: String = ""
     
     @IBAction func selectDifficulty(_ sender: UIButton) {
         
+        let defaultBlue = UIColor(red: 0, green: 0.478431, blue: 1, alpha: 1)
+        
+        //resets color of other buttons
+        
+        easyButton.setTitleColor(defaultBlue, for: UIControlState.normal
+        )
+        
+        mediumButton.setTitleColor(defaultBlue, for: UIControlState.normal)
+        
+        hardButton.setTitleColor(defaultBlue, for: UIControlState.normal)
+        
+        
+       // change color of sender button
+        sender.setTitleColor(UIColor.red, for: UIControlState.normal)
+        
+        
         difficulty =  "\(sender.titleLabel!.text!)"
         print(difficulty)
+        
     }
     
-    //Key board dissapears if user taps on screen
+    //Keyboard disappears if user taps on screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
+    //keyboard disappears on return.
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
@@ -41,6 +68,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //
         self.usernameTextField.delegate = self;
     }
 
