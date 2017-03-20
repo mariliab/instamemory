@@ -16,7 +16,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var url2:String = "/media/"
     
     
-    
 
     var difficulty: String = ""
     
