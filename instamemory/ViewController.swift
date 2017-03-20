@@ -84,9 +84,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 if error != nil {
                     print (error)
                 } else {
-                    if let usableData = data {
-                        print (usableData)
+                    if let data = data, let JsonString = String(data: data, encoding: String.Encoding.utf8) {
+                        print(JsonString)
+                        
+                        let json = JSON(data: JsonString)
+                        
+                        for item in json["items"].arrayValue {
+                            print(item["firstName"].stringValue)
+                        }
+                        
                     }
+                    
                 }
             }
             task.resume()
